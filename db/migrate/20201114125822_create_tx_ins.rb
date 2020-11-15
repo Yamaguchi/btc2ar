@@ -5,7 +5,7 @@ class CreateTxIns < ActiveRecord::Migration[6.0]
       t.string :txid
       t.integer :vout
       t.string :scriptsig
-      t.integer :sequence, null: false
+      t.bigint :sequence, null: false
       t.belongs_to :tx
 
       t.timestamps

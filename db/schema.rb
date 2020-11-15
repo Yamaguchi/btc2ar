@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_11_14_125827) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blockchains", force: :cascade do |t|
     t.string "chain", null: false
     t.integer "blocks", null: false
@@ -46,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.string "chainwork", null: false
     t.integer "ntx", null: false
     t.string "previousblockhash"
-    t.integer "previousblock_id"
+    t.bigint "previousblock_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["previousblock_id"], name: "index_blocks_on_previousblock_id", unique: true
@@ -72,8 +75,8 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.string "txid"
     t.integer "vout"
     t.string "scriptsig"
-    t.integer "sequence", null: false
-    t.integer "tx_id"
+    t.bigint "sequence", null: false
+    t.bigint "tx_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tx_id"], name: "index_tx_ins_on_tx_id"
@@ -87,7 +90,7 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.string "colorid"
     t.string "scripthash", null: false
     t.string "address"
-    t.integer "tx_id"
+    t.bigint "tx_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tx_id"], name: "index_tx_outs_on_tx_id"
@@ -104,7 +107,7 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.string "blockhash", null: false
     t.integer "time", null: false
     t.integer "blocktime", null: false
-    t.integer "block_id"
+    t.bigint "block_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["block_id"], name: "index_txs_on_block_id"

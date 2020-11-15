@@ -138,6 +138,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     protobuf (3.8.5)
       activesupport (>= 3.2)
       middleware
@@ -252,6 +253,7 @@ DEPENDENCIES
   delayed_job_recurring
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)

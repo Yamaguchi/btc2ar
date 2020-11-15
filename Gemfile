@@ -61,3 +61,6 @@ gem 'daemons'
 # Bitcoin
 gem 'bitcoinrb', require: 'bitcoin'
 
+
+# PostgreSQL
+gem 'pg'
