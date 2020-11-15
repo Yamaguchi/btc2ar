@@ -9,9 +9,9 @@ class CreateBlocks < ActiveRecord::Migration[6.0]
       t.integer :version, null: false
       t.string :versionhex, null: false
       t.string :merkleroot, null: false
-      t.integer :time, null: false
-      t.integer :mediantime, null: false
-      t.integer :nonce, null: false
+      t.bigint :time, null: false
+      t.bigint :mediantime, null: false
+      t.bigint :nonce, null: false
       t.string :bits, null: false
       t.float :difficulty, null: false
       t.string :chainwork, null: false
