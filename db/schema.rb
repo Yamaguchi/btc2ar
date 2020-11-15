@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_14_125827) do
+ActiveRecord::Schema.define(version: 2020_11_15_132707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.integer "version", null: false
     t.string "versionhex", null: false
     t.string "merkleroot", null: false
-    t.integer "time", null: false
-    t.integer "mediantime", null: false
-    t.integer "nonce", null: false
+    t.bigint "time", null: false
+    t.bigint "mediantime", null: false
+    t.bigint "nonce", null: false
     t.string "bits", null: false
     t.float "difficulty", null: false
     t.string "chainwork", null: false
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.bigint "previousblock_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["blockhash"], name: "index_blocks_on_blockhash", unique: true
+    t.index ["height"], name: "index_blocks_on_height", unique: true
     t.index ["previousblock_id"], name: "index_blocks_on_previousblock_id", unique: true
   end
 
@@ -102,11 +104,11 @@ ActiveRecord::Schema.define(version: 2020_11_14_125827) do
     t.integer "size", null: false
     t.integer "vsize", null: false
     t.integer "weight", null: false
-    t.integer "locktime", null: false
+    t.bigint "locktime", null: false
     t.string "hex", null: false
     t.string "blockhash", null: false
-    t.integer "time", null: false
-    t.integer "blocktime", null: false
+    t.bigint "time", null: false
+    t.bigint "blocktime", null: false
     t.bigint "block_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
