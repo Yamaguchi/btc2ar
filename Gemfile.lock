@@ -91,11 +91,15 @@ GEM
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     daemon-spawn (0.4.2)
+    daemons (1.3.1)
     delayed_job (4.1.8)
       activesupport (>= 3.0, < 6.1)
     delayed_job_active_record (4.1.4)
       activerecord (>= 3.0, < 6.1)
       delayed_job (>= 3.0, < 5)
+    delayed_job_recurring (0.3.9)
+      delayed_job (>= 3.0)
+      delayed_job_active_record
     ecdsa (1.2.0)
     erubi (1.10.0)
     eventmachine (1.2.7)
@@ -243,7 +247,9 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  daemons
   delayed_job_active_record
+  delayed_job_recurring
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 4.1)
