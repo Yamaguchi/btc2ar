@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ActiveJob
 gem 'delayed_job_active_record'
+
+# Bitcoin
+gem 'bitcoinrb', require: 'bitcoin'

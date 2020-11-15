@@ -1,0 +1,26 @@
+default: &default
+  schema: http
+
+development:
+  <<: *default
+  network: testnet
+  host: localhost
+  port: 18332
+  user: user
+  password: pass
+
+test:
+  <<: *default
+  network: testnet
+  host: localhost
+  port: 18332
+  user: user
+  password: pass
+
+production:
+  <<: *default
+  network: mainnet
+  host: <%= ENV['BITCOIN_RPC_HOST'] %>
+  port: <%= ENV['BITCOIN_RPC_PORT'] %>
+  user: <%= ENV['BITCOIN_RPC_USER'] %>
+  password: <%= ENV['BITCOIN_RPC_PASSWORD'] %>
