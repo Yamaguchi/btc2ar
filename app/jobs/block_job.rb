@@ -11,6 +11,7 @@ class BlockJob < ApplicationJob
       response["tx"].each do |txid|
         TxJob.perform_later(txid)
       end
+      BlockJob.perform_later(height + 1)
     end
   rescue BlockNotFound => e
     previous = Block.find_by(height: height - 1)

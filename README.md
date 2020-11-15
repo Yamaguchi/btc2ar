@@ -11,7 +11,6 @@ bundle install
 ## Setup
 
 bin/rails db:create db:migrate db:seed
-bin/rails s
 
 ## Start Service
 
