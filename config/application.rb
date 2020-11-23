@@ -28,5 +28,6 @@ module Btc2ar
         controller_specs: true,
         routing_specs: true
     end
+    config.generators.template_engine = :slim
   end
 end

@@ -68,3 +68,6 @@ gem 'pg'
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 end
+
+# Slim template engine
+gem 'slim-rails'
