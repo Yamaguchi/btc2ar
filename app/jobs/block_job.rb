@@ -1,5 +1,5 @@
 class BlockJob < ApplicationJob
-  queue_as :default
+  queue_as :high
 
   def perform(height)
     block_hash = client.getblockhash(height)

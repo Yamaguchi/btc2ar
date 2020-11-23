@@ -17,5 +17,8 @@ module Btc2ar
     # the framework and any gems in your application.
 
     config.active_job.queue_adapter = :delayed_job
+    Delayed::Worker.queue_attributes = {
+      high: { priority: -10 }
+    }
   end
 end
