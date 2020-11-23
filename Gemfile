@@ -61,6 +61,10 @@ gem 'daemons'
 # Bitcoin
 gem 'bitcoinrb', require: 'bitcoin'
 
-
 # PostgreSQL
 gem 'pg'
+
+# Rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+end

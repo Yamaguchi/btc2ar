@@ -20,5 +20,13 @@ module Btc2ar
     Delayed::Worker.queue_attributes = {
       high: { priority: -10 }
     }
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        view_specs: true,
+        helper_specs: true,
+        controller_specs: true,
+        routing_specs: true
+    end
   end
 end
