@@ -71,3 +71,13 @@ end
 
 # Slim template engine
 gem 'slim-rails'
+
+# Views
+gem 'show_for'
+gem 'simple_form'
+gem 'materialize-sass'
+gem 'material_icons'
+gem 'jquery-datatables'
+
+#paging
+gem 'kaminari'

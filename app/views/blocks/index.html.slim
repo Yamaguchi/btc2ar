@@ -1,0 +1,20 @@
+.container
+  table.striped
+    thead
+      tr
+        th
+          | Height
+        th
+          | Hash
+        th
+          | Block time (UTC)
+        th
+          | Size
+    tbody
+      - @blocks.each do |block|
+        tr
+          td = block.height
+          td = block.blockhash
+          td = format_date(block.time)
+          td = block.size
+  = paginate @blocks

@@ -8,4 +8,11 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    header.navbar-fixed 
+      nav class="#{@color}"
+        a#sidenav href="#" data-target="slide-out" class="button-collapse sidenav-trigger show-on-large" data-turbolinks="false"
+          i class="material-icons right" apps 
+        Bitcoin Block Explorer
+    main
+      .container
+        = yield
