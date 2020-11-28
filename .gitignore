@@ -65,3 +65,7 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+# For macOS
+.DS_Store
+/**/.DS_Store
