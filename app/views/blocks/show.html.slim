@@ -1,0 +1,90 @@
+h2
+  | Block 
+  = @block.height
+
+table
+  tbody
+    tr
+      td
+        | Hash
+      td
+        = @block.blockhash
+    tr
+      td
+        | Previous Block Hash
+      td
+        = @block.previousblockhash
+    tr
+      td
+        | Next Block Hash
+      td
+        = @block.next_block&.blockhash
+    tr
+      td
+        | Confirmations
+      td
+        
+    tr
+      td
+        | Block time (UTC)
+      td
+        = format_date(@block.time)
+    tr
+      td
+        | Height
+      td
+        = @block.height
+    tr
+      td
+        | Number of Transactions
+      td
+        = @block.txs.count
+    tr
+      td
+        | Difficulty
+      td
+        = @block.difficulty
+    tr
+      td
+        | Merkle root
+      td
+        = @block.merkleroot
+    tr
+      td
+        | Version
+      td
+        = @block.versionhex
+    tr
+      td
+        | Bits
+      td
+        = @block.bits
+    tr
+      td
+        | Size (bytes)
+      td
+        = @block.size
+    tr
+      td
+        | Weight
+      td
+        = @block.weight
+    tr
+      td
+        | Nonce
+      td
+        = @block.nonce
+    tr
+      td
+        | Transaction Volume
+      td
+    tr
+      td
+        | Block Reward
+      td
+    tr
+      td
+        | Fee Reward
+      td
+
+

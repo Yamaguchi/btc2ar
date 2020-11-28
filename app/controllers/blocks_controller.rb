@@ -4,5 +4,6 @@ class BlocksController < ApplicationController
   end
 
   def show
+    @block = Block.find_by(blockhash: params[:blockhash])
   end
 end
