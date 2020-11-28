@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  root 'blocks#index'
-
   resources :blocks, only: [:index] do
-    get ':blockhash', to: 'blocks#show', on: :collection
+    get ':blockhash', to: 'blocks#show', on: :collection, as: :show
   end
   resources :transactions, only: [:index, :show]
 end

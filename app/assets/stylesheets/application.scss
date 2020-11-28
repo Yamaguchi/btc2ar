@@ -6,3 +6,4 @@
 $primary-color: color("blue-grey", "darken-2") !default;
 $secondary-color: color("yellow", "darken-2") !default;
 @import 'materialize';
+@import 'custom.scss';

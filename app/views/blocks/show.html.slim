@@ -1,6 +1,4 @@
-h2
-  | Block 
-  = @block.height
+h2 = render "shared/breadcrumb", contents: [{ label: "Blocks", path: blocks_path }, { label: @block.height }]
 
 table
   tbody
@@ -13,12 +11,14 @@ table
       td
         | Previous Block Hash
       td
-        = @block.previousblockhash
+        - if @block.previousblockhash
+          = link_to @block.previousblockhash, show_blocks_path(@block.previousblockhash)
     tr
       td
         | Next Block Hash
       td
-        = @block.next_block&.blockhash
+        - if @block.next_block
+          = link_to @block.next_block.blockhash, show_blocks_path(@block.next_block.blockhash)
     tr
       td
         | Confirmations

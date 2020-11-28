@@ -14,7 +14,7 @@
       - @blocks.each do |block|
         tr
           td = block.height
-          td = block.blockhash
+          td = link_to block.blockhash, show_blocks_path(block.blockhash)
           td = format_date(block.time)
           td = block.size
   = paginate @blocks
